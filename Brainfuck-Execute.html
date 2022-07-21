@@ -1,0 +1,145 @@
+<!--
+ ____            _        __            _    _____                     _
+| __ ) _ __ __ _(_)_ __  / _|_   _  ___| | _ | ____|_  _____  ___ _   _| |_ ___
+|  _ \| '__/ _` | | '_ \| |_| | | |/ __| |/ /|  _| \ \/ / _ \/ __| | | | __/ _ \
+| |_) | | | (_| | | | | |  _| |_| | (__|   < | |___ >  <  __/ (__| |_| | ||  __/
+|____/|_|  \__,_|_|_| |_|_|  \__,_|\___|_|\_\|_____/_/\_\___|\___|\__,_|\__\___|                                                                                        
+-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Brainfuck Execute</title>
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="wrapper">
+	<div class="result-box">
+		<div class="result"></div>
+		<div class="memory"></div>
+		<div class="debug"></div>
+	</div>
+
+	<div class="button-box">
+		<button class="execute">Execute</button>
+		<button class="pause">Stop</button>
+		<button class="resume">Resume</button>
+	</div>
+
+	<div class="option-box">
+		実行速度：<select class="speed">
+			<option value="fastest">Fastest</option>
+			<option value="0">0 ms</option>
+			<option value="10">10 ms</option>
+			<option value="10">20 ms</option>
+			<option value="10">30 ms</option>
+			<option value="10">40 ms</option>
+			<option value="50" selected>50 ms</option>
+			<option value="50">60 ms</option>
+			<option value="50">70 ms</option>
+			<option value="50">80 ms</option>
+			<option value="50">90 ms</option>
+			<option value="100">100 ms</option>
+			<option value="200">200 ms</option>
+			<option value="300">300 ms</option>
+			<option value="400">400 ms</option>
+			<option value="500">500 ms</option>
+			<option value="600">600 ms</option>
+			<option value="700">700 ms</option>
+			<option value="800">800 ms</option>
+			<option value="900">900 ms</option>
+			<option value="1000">1000 ms</option>
+		</select>
+	</div>
+
+	<div class="code-box">
+		CodeEditor:<br>
+		<textarea class="code" placeholder="ここに書く"></textarea>
+
+		<div class="notes">
+			Notes:<br>
+			<ul>
+				<li>
+					Brainfuckとはプログラミング言語である<a href="https://ja.wikipedia.org/wiki/Brainfuck" target="_blank">Brainfuck - Wikipedia</a>
+				</li>
+				<li>
+					Brainfuckの命令の意味
+					<table>
+						<tr><th>></th><td>ポインタ(メモリの番地)を右に1つ移動する</td></tr>
+						<tr><th><</th><td>ポインタ(メモリの番地)を左に1つ移動する</td></tr>
+						<tr><th>+</th><td>ポインタが指すメモリの値を+1する</td></tr>
+						<tr><th>-</th><td>ポインタが指すメモリの値を-1する</td></tr>
+						<tr><th>,</th><td>入力から1バイト読み込んで指しているポインタに代入する</td></tr>
+						<tr><th>.</th><td>ポインタが指す値を文字として出力する</td></tr>
+						<tr><th>[</th><td>ポインタが指す値が0なら対応する ] までジャンプする(ループ)</td></tr>
+						<tr><th>]</th><td>ポインタが指す値が0でないなら対応する [ までジャンプする(ループ)</td></tr>
+					</table>
+				</li>
+				<li>ASCIIコード表
+					<table>
+						<tr><th>(スペース)</th><th>!</th><th>&quot;</th><th>#</th><th>$</th><th>%</th><th>&</th><th>'</th><th>(</th><th>)</th><th>*</th><th>+</th><th>,</th><th>-</th><th>.</th><th>/</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>:</th><th>;</th><th>&lt;</th><th>=</th><th>&gt;</th><th>?</th><th>@</th></tr>
+						<tr><td>32</td><td>33</td><td>34</td><td>35</td><td>36</td><td>37</td><td>38</td><td>39</td><td>40</td><td>41</td><td>42</td><td>43</td><td>44</td><td>45</td><td>46</td><td>47</td><td>48</td><td>49</td><td>50</td><td>51</td><td>52</td><td>53</td><td>54</td><td>55</td><td>56</td><td>57</td><td>58</td><td>59</td><td>60</td><td>61</td><td>62</td><td>63</td><td>64</td></tr>
+					</table>
+					<table>
+						<tr></tr>
+						<tr></tr>
+					</table>
+					<table>
+						<tr><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th><th>J</th><th>K</th><th>L</th><th>M</th><th>N</th><th>O</th><th>P</th><th>Q</th><th>R</th><th>S</th><th>T</th><th>U</th><th>V</th><th>W</th><th>X</th><th>Y</th><th>Z</th></tr>
+						<tr><td>65</td><td>66</td><td>67</td><td>68</td><td>69</td><td>70</td><td>71</td><td>72</td><td>73</td><td>74</td><td>75</td><td>76</td><td>77</td><td>78</td><td>79</td><td>80</td><td>81</td><td>82</td><td>83</td><td>84</td><td>85</td><td>86</td><td>87</td><td>88</td><td>89</td><td>90</td></tr>
+						<tr><th>a</th><th>b</th><th>c</th><th>d</th><th>e</th><th>f</th><th>g</th><th>h</th><th>i</th><th>j</th><th>k</th><th>l</th><th>m</th><th>n</th><th>o</th><th>p</th><th>q</th><th>r</th><th>s</th><th>t</th><th>u</th><th>v</th><th>w</th><th>x</th><th>y</th><th>z</th></tr>
+						<tr><td>97</td><td>98</td><td>99</td><td>100</td><td>101</td><td>102</td><td>103</td><td>104</td><td>105</td><td>106</td><td>107</td><td>108</td><td>109</td><td>110</td><td>111</td><td>112</td><td>113</td><td>114</td><td>115</td><td>116</td><td>117</td><td>118</td><td>119</td><td>120</td><td>121</td><td>122</td></tr>
+					</table>
+					詳しいASCIIコード表<a href="http://www3.nit.ac.jp/~tamura/ex2/ascii.html">http://www3.nit.ac.jp/~tamura/ex2/ascii.html</a>
+				</li>
+				<li>
+					コードが長すぎると実行速度が遅くなりフリーズする可能性があります。
+				</li>
+				<li>
+					ループコード<br>
+					+[>+><]<br>
+					+[>-><]<br>
+					+[>+.<]<br>
+					+[>-.<]<br>
+				</li>
+				<li>
+					「HELLO WORLD!」を出力する一例<br>
+					+++++++++++[>++++++>++++++>+++>++++++++<<<<-]>+++>++++++.<.>++++..+++.>-.>-.<<.>>-----.<<---.<-.>>+.
+				</li>
+				<li>
+					「A(=65)」を出力する<br>
+					++++++++++ ++++++++++ ++++++++++ ++++++++++ ++++++++++ ++++++++++ +++++.<br>
+					(改行やスペースなどBrainfuckの命令に関係ない文字列は無視されます)
+				</li>
+				<li>
+					基本的なループの使い方「13 * 7」<br>
+					+++++++++++++ [>+++++++<-]<br>
+					(13が0になるまで横のポインタに7を足し続けるループ)
+				</li>
+				<li>
+					応用的なループの使い方「z」を出力<br>
+					++[>++++++++++[>++++++<-]>+<<-]>>.<br>
+					(ループさせたものをループする)
+				</li>
+				<li>
+					「A」を出力する、を短く書く<br>
+					++++++++ [>++++++++<-] >+.<br>
+				</li>
+				<li>
+					ひたすら入力を出力する<br>
+					,[.[-],]
+				</li>
+				<li>
+					AとBを掛け算する<br>
+					A(+++++) > B(+++++++) = <[->>+<<]>[->[->+<<<+>>]>[-<+>]<<]<
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<script src="./js/script.js"></script>
+</body>
+</html>
+<!--
+	3e2b2b5b3e2b2b2b2b2b2b2b2b2b2b5b3e2b2b2b2b2b2b3c2d5d3e2b3c3c2d5d3e3e2e3c2b2b2b2b2b205b3e2d2d2d3c2d5d3e2e3c2b2b2b2b2b2b2b205b3e2b2b3
+-->
