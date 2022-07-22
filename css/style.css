@@ -1,0 +1,29 @@
+.execute {
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    background: green;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+  
+.stop {
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    background: red;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+
+.resume {
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    background: #4676D7;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 16px;
+  }

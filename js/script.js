@@ -30,14 +30,14 @@ function init(running) {
 
 	// ボタンの状態を戻す
 	$('.resume').style.display = 'none';
-	$('.pause').style.display = 'inline-block';
+	$('.stop').style.display = 'inline-block';
 
 	show(running);
 }
 
 function finish() {
 	$('.resume').style.display = 'none';
-	$('.pause').style.display = 'inline-block';
+	$('.stop').style.display = 'inline-block';
 }
 
 function execute() {
@@ -182,13 +182,13 @@ $('.execute').onclick = function() {
 	timerID = setTimeout(execute, interval);
 }
 
-$('.pause').onclick = function() {
-	pauseCode();
+$('.stop').onclick = function() {
+	stopCode();
 }
 
-function pauseCode() {
+function stopCode() {
 	clearTimeout(timerID);
-	$('.pause').style.display = 'none';
+	$('.stop').style.display = 'none';
 	$('.resume').style.display = 'inline-block';
 }
 
@@ -198,7 +198,7 @@ $('.resume').onclick = function() {
 	show(true);
 	timerID = setTimeout(execute, interval);
 	this.style.display = 'none';
-	$('.pause').style.display = 'inline-block';
+	$('.stop').style.display = 'inline-block';
 }
 
 function escape_html (string) {
