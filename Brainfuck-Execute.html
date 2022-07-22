@@ -56,25 +56,49 @@
 		CodeEditor:<br>
 		<textarea class="code" placeholder="ここに書く"></textarea>
 
-		<div class="notes">
-			Notes:<br>
+		<div class="memo">
+			Memo:<br>
 			<ul>
 				<li>
 					Brainfuckとはプログラミング言語である<a href="https://ja.wikipedia.org/wiki/Brainfuck" target="_blank">Brainfuck - Wikipedia</a>
 				</li>
 				<li>
 					Brainfuckの命令の意味
-					<table>
-						<tr><th>></th><td>ポインタ(メモリの番地)を右に1つ移動する</td></tr>
-						<tr><th><</th><td>ポインタ(メモリの番地)を左に1つ移動する</td></tr>
-						<tr><th>+</th><td>ポインタが指すメモリの値を+1する</td></tr>
-						<tr><th>-</th><td>ポインタが指すメモリの値を-1する</td></tr>
-						<tr><th>,</th><td>入力から1バイト読み込んで指しているポインタに代入する</td></tr>
-						<tr><th>.</th><td>ポインタが指す値を文字として出力する</td></tr>
-						<tr><th>[</th><td>ポインタが指す値が0なら対応する ] までジャンプする(ループ)</td></tr>
-						<tr><th>]</th><td>ポインタが指す値が0でないなら対応する [ までジャンプする(ループ)</td></tr>
+					<table border="2">
+						<tr>
+							<td>></td>
+							<td>ポインタを右に1つ移動</td>
+						</tr>
+						<tr>
+							<td><</td>
+							<td>ポインタを左に1つ移動</td>
+						</tr>
+						<tr>
+							<td>+</td>
+							<td>ポインタが指すメモリの値を+1</td>
+						</tr>
+						<tr>
+							<td>-</td>
+							<td>ポインタが指すメモリの値を-1</td>
+						</tr>
+						<tr>
+							<td>.</td>
+							<td>ポインタが指す値を文字として出力する</td>
+						</tr>
+						<tr>
+							<td>,</td>
+							<td>入力から1バイト読み込み指しているポインタに代入</td>
+						</tr>
+						<tr>
+							<td>[</td>
+							<td>ポインタが指す値が0なら対応する]までジャンプ</td>
+						</tr>
+						<tr>
+							<td>]</td>
+							<td>ポインタが指す値が0でないなら対応する[までジャンプ</td>
+						</tr>
 					</table>
-				</li>
+				</li>	
 				<li>ASCIIコード表
 					<table border="2">
 						<tr>
