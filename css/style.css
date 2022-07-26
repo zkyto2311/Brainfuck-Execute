@@ -6,6 +6,7 @@
     color: #fff;
     padding: 8px 16px;
     font-size: 16px;
+    resize:none;
   }
   
 .stop {
@@ -16,6 +17,7 @@
     color: #fff;
     padding: 8px 16px;
     font-size: 16px;
+    resize:none;
   }
 
 .resume {
@@ -26,6 +28,7 @@
     color: #fff;
     padding: 8px 16px;
     font-size: 16px;
+    resize:none;
   }
 
 .mmr {
