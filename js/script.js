@@ -1,4 +1,4 @@
-const codeEditor   = $('.code');
+const codeEditor   = $('.code-editor');
 const resultViewer = $('.result');
 const memoryViewer = $('.memory');
 const codeViewer   = $('.debug');
