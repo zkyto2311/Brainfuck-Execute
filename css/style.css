@@ -48,13 +48,22 @@ height:150px;
 resize:none;
 }
 
-.result {
-width:100%;
-height:15px;
-resize:none;
-}
-
 li {
   padding-left: 10px;
   padding: 10px 0;
+}
+
+.result-box,
+.memory-box,
+.option-box,
+.button-box,
+.code-box {
+		line-height:1;
+}
+.result,
+.memory,
+.debug {
+		display:block;
+		min-height:20px;
+		padding:10px 0;
 }
