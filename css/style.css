@@ -68,3 +68,7 @@ li {
 		min-height:20px;
 		padding:10px 0;
 }
+
+strong {
+    color: red;
+}
