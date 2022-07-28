@@ -56,10 +56,11 @@ li {
 .result-box,
 .memory-box,
 .option-box,
-.button-box,
-.code-box {
+.code-box,
+.button-box {
 		line-height:1;
 }
+
 .result,
 .memory,
 .debug {
