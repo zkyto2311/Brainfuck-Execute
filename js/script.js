@@ -63,7 +63,7 @@ function execute() {
 			memoryIndex--;
 			break;
 		case ',':
-			let c = window.prompt("入力してください", "");
+			let c = window.prompt("入力", "");
 			if(c) {
 				c = c.slice(0, 1).charCodeAt(0);
 				memory[memoryIndex] = c;
