@@ -61,7 +61,6 @@ li {
 		line-height:1;
 }
 
-.result,
 .memory,
 .debug {
 		display:block;
@@ -75,4 +74,16 @@ strong {
 
 .active {
     background-color:#b3d9ff;
+}
+
+.code-editor {
+    background-color: #1E1916;
+    color:#fff
+}
+
+.result {
+    color: #fff;
+    height: 150px;
+    width: 100%;
+    background-color: #1E1916;
 }
